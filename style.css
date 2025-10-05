@@ -37,7 +37,7 @@ a {
 
 #navbar a {
   padding: 16px;
-  width: 50%;
+  width: 25%;
 }
 
 #navbar a:hover, #navbar a:focus, .active {
@@ -117,6 +117,53 @@ img {
 #profile-link:hover {
   background-color: var(--main-cyan);
   border-radius: 5px;
+}
+
+#logo-section {
+    padding: 20px;
+    color: white;
+    min-height: 100vh;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.logo-wrapper {
+  width: 50vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 2rem;
+}
+
+#game-section {
+    padding: 20px;
+    color: white;
+    min-height: 100vh;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#game-section a {
+    padding: 5px;
+    text-decoration: underline;
+}
+
+#game-section a:hover {
+    background-color: var(--main-cyan);
+}
+
+#vine-section {
+    padding: 20px;
+    color: white;
+    min-height: 100vh;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#vine-section img {
+    display: block;
+    height: 50vh;
+    width: auto;
+    margin: auto;
 }
 
 @media only screen and (max-width: 800px) {
