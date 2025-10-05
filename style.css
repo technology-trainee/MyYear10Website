@@ -1,80 +1,148 @@
-/* A simple css reset */
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    /* The Font Family- Really important!! */
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
+:root {
+  --main-green: #22C55E;
+  --main-cyan: #06B6D4;
+  --dark-cyan: #0E7490;
+  --main-gray: #404040;
+  --dark-gray: #171717;
+  --light-gray: #E5E5E5;
 }
 
-/* reset for images to ensure they ar 100% of the parent container width */
+body {
+  margin: 0;
+  padding: 0;
+font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  color: white;
+  background-image: linear-gradient(-62deg, var(--main-gray), var(--dark-gray));
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--main-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 1;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: 'League Spartan', sans-serif;
+}
+
+#navbar a {
+  padding: 16px;
+  width: 50%;
+}
+
+#navbar a:hover, #navbar a:focus, .active {
+  background-color: white;
+  color: var(--main-cyan);
+  box-shadow: 0 0 10px 2px var(--dark-cyan);
+}
+
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+h1, h2 {
+  font-family: 'League Spartan', sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+#projects {
+  background-color: var(--main-green);
+  background-image: radial-gradient(at 0% 0%,var(--main-green), var(--main-cyan));
+  box-shadow: 0 0 5px 5px var(--dark-gray);
+  padding: 20px;
+}
+
+.project-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-tile {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  color: var(--dark-gray);
+}
+
 img {
-    width: 100%;
+  width: 100%;
 }
 
-/* The hero section styling- use your OWN Hero Image URL here */
-.hero {
-    background-image: url('images/techquitybanner-1130x160.png');
-    height: 25vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
+.project-tile:hover, .project-tile:focus {
+  background-color: var(--light-gray);
 }
 
-/* BIG text styling for the hero section text */
-.hero-text {
-    font-size: 4em;
-    font-weight: bold;
+#contacts {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
 }
 
-/* nice big font on a banner style background */
-.topic-title{
-    color: white;
-    font-size: 2em;
-    padding: 0.1em 3em;
-    background-color: rgb(71, 71, 71);
+#profile-link {
+  padding: 10px;
 }
 
-/* Three column grid with a nice big gap */
-.topic-content{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6em;
-    /* bring the whole section in off the sides of the page */
-    width: 70%;
-    /* top margin of 3em and center right/left */
-    margin: 3em auto;
+#profile-link:hover {
+  background-color: var(--main-cyan);
+  border-radius: 5px;
 }
 
-/* Styling for the individual topic cards rounded edges background color and a drop shadow */
-.topic-card{
-    background-color: rgb(71, 71, 71);
-    color: white;
-    padding: 1em;
-    border-radius: 0.5em;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
 }
 
-/* Styling for the topic card titles */
-.topic-card-text{
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-    /* center align text */
-    text-align: center;
-}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
 
+  h2 {
+    font-size: 2rem;
+  }
 
-/* Styling for a footer section to take a bit of spcae at the bottom of the page */
-.footer{
-    background-color: rgb(71, 71, 71);
-    color: white;
-    text-align: right;
-    padding: 3em 3em;
+  p {
+    font-size: 1rem;
+  }
 }
